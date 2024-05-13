@@ -26,7 +26,6 @@ the files ( for now console log the file name and the event.i.e copy, delete, re
 <img src="https://github.com/Shaban-Eissa/Jisr-React-Task/assets/49924090/bfe236e3-1989-4c7b-822a-4117062e993e" width="950" height="450" />
 
 
-
 ## Installation
 
 1. **Clone the repository:**
