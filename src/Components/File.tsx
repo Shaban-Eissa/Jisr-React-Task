@@ -1,55 +1,43 @@
+import React from "react";
+
 import { IFile } from "../Types";
-import {
-  cssIcon,
-  defaultIcon,
-  folderIcon,
-  htmlIcon,
-  jsIcon,
-  tsIcon,
-  imgIcon,
-  svgIcon,
-} from "../Constants";
+import { getIcon } from "../Utils/icons";
+import { ContextMenu } from "./ContextMenu/ContextMenu";
 
 export const FileComponent: React.FC<{ file: IFile }> = ({ file }) => {
-  let icon;
-  switch (file.meta) {
-    case "js":
-      icon = jsIcon;
-      break;
-    case "ts":
-      icon = tsIcon;
-      break;
-    case "html":
-      icon = htmlIcon;
-      break;
-    case "css":
-      icon = cssIcon;
-      break;
-    case "folder":
-      icon = folderIcon;
-      break;
-    case "img":
-      icon = imgIcon;
-      break;
-    case "svg":
-      icon = svgIcon;
-      break;
-    default:
-      icon = defaultIcon;
-  }
+  const [showContextMenu, setShowContextMenu] = React.useState(false);
+  const [contextMenuPosition, setContextMenuPosition] = React.useState({
+    x: "0px",
+    y: "0px",
+  });
 
   const handleContextMenu = (event: React.MouseEvent) => {
     event.preventDefault();
-    console.log(file.name, "copy/delete/rename");
+    setContextMenuPosition({ x: `${event.pageX}px`, y: `${event.pageY}px` });
+    setShowContextMenu(true);
+  };
+
+  const handleOptionClick = (option: string) => {
+    console.log(option, file.name);
+    setShowContextMenu(false);
   };
 
   return (
-    <div className="file" onContextMenu={handleContextMenu}>
-      <span
-        className="file-icon"
-        dangerouslySetInnerHTML={{ __html: icon }}
-      ></span>
-      <span className="file-name">{file.name}</span>
-    </div>
+    <>
+      <div className="file" onContextMenu={handleContextMenu}>
+        <span
+          className="file-icon"
+          dangerouslySetInnerHTML={{ __html: getIcon(file.meta) }}
+        ></span>
+        <span className="file-name">{file.name}</span>
+      </div>
+      {showContextMenu && (
+        <ContextMenu
+          options={["Copy", "Delete", "Rename"]}
+          onOptionClick={handleOptionClick}
+          style={{ top: contextMenuPosition.y, left: contextMenuPosition.x }}
+        />
+      )}
+    </>
   );
 };
