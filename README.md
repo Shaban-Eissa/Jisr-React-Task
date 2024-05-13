@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# React Typescript Task For Technical Interview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://github.com/Shaban-Eissa/Jisr-React-Task/assets/49924090/707fff67-eb09-457b-8b72-b3eba044d352" width="180" height="115" />
 
-## Available Scripts
 
-In the project directory, you can run:
+File Explorer Demo built with React & Typescript.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [Features](#features)
+* [Demo](#demo)
+* [Installation](#installation)
+* [Technologies Used](#technologies-used)
+* [Contributing](#contributing)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Render List of Nested Folders:** Allow to render the folders & files with icons.
+* **Popup Menu:** On right click on files a popup opens and you should allow copy, deletion and rename of
+the files ( for now console log the file name and the event.i.e copy, delete, rename ).
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://github.com/Shaban-Eissa/Jisr-React-Task/assets/49924090/bfe236e3-1989-4c7b-822a-4117062e993e" width="950" height="450" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**
+    
+    ```bash
+    git clone https://github.com/Shaban-Eissa/Jisr-React-Task
+    ```
+    
+2. **Install dependencies:**
+    
+    ```bash
+    cd Jisr-React-Task
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. **Run the application:**
+    
+    ```bash
+    npm start
+    ```
+    
+    The application will be accessible at `http://localhost:3000`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Technologies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project utilizes a stack of modern technologies for efficient development and optimal user experience:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- Tyepscript
+
+  
+## Contributing
+
+Contributions are welcome! Please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bugfix: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature-name`.
+5. Open a pull request.
+   
