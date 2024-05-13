@@ -9,5 +9,3 @@ export interface IFolder {
   name: string;
   data: Array<IFile | IFolder>;
 }
-
-type MyFileOrFolder = IFile | IFolder;

@@ -13,14 +13,30 @@ export const FileComponent: React.FC<{ file: IFile }> = ({ file }) => {
 
   const handleContextMenu = (event: React.MouseEvent) => {
     event.preventDefault();
-    setContextMenuPosition({ x: `${event.pageX}px`, y: `${event.pageY}px` });
+    if (showContextMenu) {
+      setShowContextMenu(false);
+    }
     setShowContextMenu(true);
+    setContextMenuPosition({ x: `${event.pageX}px`, y: `${event.pageY}px` });
   };
 
   const handleOptionClick = (option: string) => {
     console.log(option, file.name);
     setShowContextMenu(false);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (showContextMenu) {
+      setShowContextMenu(false);
+    }
+  };
+
+  React.useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>

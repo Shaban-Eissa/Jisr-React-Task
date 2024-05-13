@@ -1,3 +1,2 @@
-
-export * from './icons';
-export * from './files';
+export * from "./icons";
+export * from "./files";
