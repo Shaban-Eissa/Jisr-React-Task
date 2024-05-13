@@ -2,10 +2,10 @@ import React from "react";
 
 import "../App.css";
 
-import { Folder } from "../Types";
+import { IFolder } from "../Types";
 import { FileComponent } from "./File";
 
-export const FolderComponent: React.FC<{ folder: Folder }> = ({ folder }) => {
+export const FolderComponent: React.FC<{ folder: IFolder }> = ({ folder }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleOpen = () => setIsOpen(!isOpen);

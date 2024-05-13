@@ -1,13 +1,13 @@
-export interface MyFile {
+export interface IFile {
   type: "file";
   meta: string;
   name: string;
 }
 
-export interface Folder {
+export interface IFolder {
   type: "folder";
   name: string;
-  data: Array<MyFile | Folder>;
+  data: Array<IFile | IFolder>;
 }
 
-type MyFileOrFolder = MyFile | Folder;
+type MyFileOrFolder = IFile | IFolder;

@@ -1,11 +1,23 @@
-import { MyFile } from "../Types";
-import { cssIcon, folderIcon, htmlIcon, jsIcon } from "../Constants";
+import { IFile } from "../Types";
+import {
+  cssIcon,
+  defaultIcon,
+  folderIcon,
+  htmlIcon,
+  jsIcon,
+  tsIcon,
+  imgIcon,
+  svgIcon,
+} from "../Constants";
 
-export const FileComponent: React.FC<{ file: MyFile }> = ({ file }) => {
+export const FileComponent: React.FC<{ file: IFile }> = ({ file }) => {
   let icon;
   switch (file.meta) {
     case "js":
       icon = jsIcon;
+      break;
+    case "ts":
+      icon = tsIcon;
       break;
     case "html":
       icon = htmlIcon;
@@ -16,11 +28,14 @@ export const FileComponent: React.FC<{ file: MyFile }> = ({ file }) => {
     case "folder":
       icon = folderIcon;
       break;
-    case "ts":
-      icon = tsIcon;
+    case "img":
+      icon = imgIcon;
+      break;
+    case "svg":
+      icon = svgIcon;
       break;
     default:
-      icon = folderIcon;
+      icon = defaultIcon;
   }
 
   const handleContextMenu = (event: React.MouseEvent) => {

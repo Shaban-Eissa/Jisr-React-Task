@@ -1,6 +1,6 @@
-import { Folder } from "../Types";
+import { IFolder } from "../Types";
 
-export const Files: Folder = {
+export const Files: IFolder = {
   type: "folder",
   name: "parent",
   data: [

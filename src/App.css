@@ -1,7 +1,8 @@
-/* App.css */
-
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
 }
 
 .folder,
@@ -9,7 +10,6 @@ body {
   padding: 10px;
   border: 1px solid #ddd;
   margin-bottom: 10px;
-  border-radius: 5px;
 }
 
 .folder {
